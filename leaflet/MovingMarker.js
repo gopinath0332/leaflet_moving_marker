@@ -296,6 +296,9 @@ L.Marker.MovingMarker = L.Marker.extend({
             this._animId = L.Util.requestAnimFrame(this._animate, this, false);
             this._animRequested = true;
         }
+        if(this.options.onAnimate){
+            this.options.onAnimate();
+        }
     }
 });
 
